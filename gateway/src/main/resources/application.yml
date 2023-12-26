@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mvsc-gateway
+  config:
+    import: optional:configserver:http://localhost:8888 
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: greeting
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/greeting/**
+        
