@@ -1,0 +1,13 @@
+GET http://localhost:7000/api/users/all
+
+###
+GET http://localhost:7000/api/users/search/1
+
+###
+POST http://localhost:7000/api/users/save
+Content-Type: application/json
+
+{
+    "username": "Marcelo",
+    "role": "COMMON"
+}

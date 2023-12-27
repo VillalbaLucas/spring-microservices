@@ -1,0 +1,25 @@
+server:
+  port: 7000
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: mvsc-apiuser
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_user
+    username: root
+    password: root
+  jpa: 
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+
+eureka:
+  intance:
+    hostname: localhost
+  client:
+    serviceUrl:
+     defaultZone: http://localhost:8761/eureka/
