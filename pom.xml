@@ -17,6 +17,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<modules>
+		<module>api-user</module>
 		<module>eureka</module>
 		<module>config</module>
 		<module>gateway</module>
