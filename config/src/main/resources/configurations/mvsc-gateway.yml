@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    registerWithEureka: false
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: mvsc-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: greeting
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/greeting/**
