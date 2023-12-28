@@ -1,13 +1,22 @@
 GET http://localhost:7000/api/users/all
 
 ###
-GET http://localhost:7000/api/users/search/1
+GET http://localhost:7000/api/users/search/2
 
 ###
 POST http://localhost:7000/api/users/save
 Content-Type: application/json
 
 {
-    "username": "Marcelo",
-    "role": "COMMON"
+    "username": "Lucas",
+    "role": "ADMIN"
+}
+
+###
+PUT http://localhost:7000/api/users/modify/1
+Content-Type: application/json
+
+{
+    "username": "Santi",
+    "role": "CUSTOMER"
 }
